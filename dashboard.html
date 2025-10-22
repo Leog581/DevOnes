@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevOnes Client Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white dark:bg-[#1c2127] flex flex-col justify-between p-4 border-r border-gray-200 dark:border-gray-700">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="DevOnes company logo, a stylized 'D' in blue and white" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3c27alX7xw2FwPLKwEcMOC3scvJQIm1TnALNVlfS8XIB-rR0G6noA1ratdvmiOSxPN7EMcxFUwI_EfAlDWC35mmhumc5JgFRM7OfWb1TWGc_6nkE93upKImyAN2hgEJPyv1YhPSnzJ7Hn4eM5vLiGlznSSwxqCGKEf0NUESRQNFI9wDY2IbB7XOudbOTlZJtFO0ZtOXE56E35PPfeT48YTDi5caHYQvTURgI4gPZ6usQqFlKsMkboL22_yjuiXvtkjzpc9bHgpam8");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-bold leading-normal">DevOnes</h1>
+<p class="text-gray-500 dark:text-[#9dabb9] text-sm font-normal leading-normal">Digital Success</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">folder</span>
+<p class="text-sm font-medium">Projects</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-sm font-medium">Calendar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<p class="text-sm font-medium">Support</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium leading-normal tracking-[0.015em]">
+<span class="truncate">Logout</span>
+</button>
+<div class="flex items-center justify-between p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Dark Mode</p>
+<button class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors bg-gray-300 dark:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<span class="inline-block w-4 h-4 transform bg-white rounded-full transition-transform translate-x-1 dark:translate-x-6"></span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-3 mb-8">
+<p class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Client Dashboard</p>
+<button class="flex items-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">New Ticket</span>
+</button>
+</div>
+<div>
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Active Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+<div class="flex flex-col justify-start rounded-lg bg-white dark:bg-[#1c2127] border-2 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFF]">
+<div class="flex flex-col gap-3">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-black dark:text-white">Project Alpha</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 self-start">In Progress</span>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#9dabb9]">A cutting-edge mobile application for seamless user experience.</p>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex justify-between">
+<p class="text-sm font-medium leading-normal text-gray-600 dark:text-white">Completion</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-white">75%</p>
+</div>
+<div class="rounded bg-gray-200 dark:bg-[#3b4754]">
+<div class="h-2 rounded bg-primary" style="width: 75%;"></div>
+</div>
+</div>
+<button class="flex min-w-[84px] w-full mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Project Details</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col justify-start rounded-lg bg-white dark:bg-[#1c2127] border-2 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFF]">
+<div class="flex flex-col gap-3">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-black dark:text-white">Project Beta</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 self-start">On Hold</span>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#9dabb9]">Enterprise-level platform for data analytics and visualization.</p>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex justify-between">
+<p class="text-sm font-medium leading-normal text-gray-600 dark:text-white">Completion</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-white">40%</p>
+</div>
+<div class="rounded bg-gray-200 dark:bg-[#3b4754]">
+<div class="h-2 rounded bg-primary" style="width: 40%;"></div>
+</div>
+</div>
+<button class="flex min-w-[84px] w-full mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Project Details</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col justify-start rounded-lg bg-white dark:bg-[#1c2127] border-2 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFF]">
+<div class="flex flex-col gap-3">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-black dark:text-white">Project Gamma</p>
+<span class="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 self-start">Completed</span>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#9dabb9]">E-commerce solution with a focus on user conversion.</p>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex justify-between">
+<p class="text-sm font-medium leading-normal text-gray-600 dark:text-white">Completion</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-white">100%</p>
+</div>
+<div class="rounded bg-gray-200 dark:bg-[#3b4754]">
+<div class="h-2 rounded bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+<button class="flex min-w-[84px] w-full mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Project Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+<div>
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Delivery Timeline</h2>
+<div class="bg-white dark:bg-[#1c2127] rounded-lg shadow-[0_0_4px_rgba(0,0,0,0.1)] p-4 mt-4">
+<div class="flex justify-between items-center mb-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined">chevron_left</span></button>
+<p class="text-lg font-semibold text-black dark:text-white">October 2023</p>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm text-gray-500 dark:text-gray-400">
+<span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+</div>
+<div class="grid grid-cols-7 gap-2 mt-2 text-center">
+<div class="text-gray-400 dark:text-gray-600">24</div>
+<div class="text-gray-400 dark:text-gray-600">25</div>
+<div class="text-gray-400 dark:text-gray-600">26</div>
+<div class="text-gray-400 dark:text-gray-600">27</div>
+<div class="text-gray-400 dark:text-gray-600">28</div>
+<div class="text-gray-400 dark:text-gray-600">29</div>
+<div class="text-gray-400 dark:text-gray-600">30</div>
+<div class="py-1 text-black dark:text-white">1</div>
+<div class="py-1 text-black dark:text-white">2</div>
+<div class="py-1 text-black dark:text-white">3</div>
+<div class="py-1 text-black dark:text-white relative"><span class="absolute w-1.5 h-1.5 bg-primary rounded-full bottom-0 left-1/2 -translate-x-1/2"></span>4</div>
+<div class="py-1 text-black dark:text-white">5</div>
+<div class="py-1 text-black dark:text-white">6</div>
+<div class="py-1 text-black dark:text-white">7</div>
+<div class="py-1 text-black dark:text-white">8</div>
+<div class="py-1 text-black dark:text-white">9</div>
+<div class="py-1 text-black dark:text-white">10</div>
+<div class="py-1 text-black dark:text-white">11</div>
+<div class="py-1 text-black dark:text-white relative"><span class="absolute w-1.5 h-1.5 bg-green-500 rounded-full bottom-0 left-1/2 -translate-x-1/2"></span>12</div>
+<div class="py-1 text-black dark:text-white bg-primary/20 rounded-full">13</div>
+<div class="py-1 text-black dark:text-white">14</div>
+<div class="py-1 text-black dark:text-white">15</div>
+<div class="py-1 text-black dark:text-white">16</div>
+<div class="py-1 text-black dark:text-white">17</div>
+<div class="py-1 text-black dark:text-white">18</div>
+<div class="py-1 text-black dark:text-white">19</div>
+<div class="py-1 text-black dark:text-white">20</div>
+<div class="py-1 text-black dark:text-white">21</div>
+<div class="py-1 text-black dark:text-white">22</div>
+<div class="py-1 text-black dark:text-white">23</div>
+<div class="py-1 text-black dark:text-white relative"><span class="absolute w-1.5 h-1.5 bg-primary rounded-full bottom-0 left-1/2 -translate-x-1/2"></span>24</div>
+<div class="py-1 text-black dark:text-white">25</div>
+<div class="py-1 text-black dark:text-white">26</div>
+<div class="py-1 text-black dark:text-white">27</div>
+<div class="py-1 text-black dark:text-white">28</div>
+<div class="py-1 text-black dark:text-white">29</div>
+<div class="py-1 text-black dark:text-white">30</div>
+<div class="py-1 text-black dark:text-white">31</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Support Tickets</h2>
+<div class="bg-white dark:bg-[#1c2127] rounded-lg shadow-[0_0_4px_rgba(0,0,0,0.1)] mt-4">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+<tr>
+<th class="px-6 py-3" scope="col">Ticket ID</th>
+<th class="px-6 py-3" scope="col">Subject</th>
+<th class="px-6 py-3" scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white border-b dark:bg-[#1c2127] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+<th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="row">#TKT-001</th>
+<td class="px-6 py-4">Login Issue</td>
+<td class="px-6 py-4"><span class="text-xs font-medium px-2 py-1 rounded-full bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200">Open</span></td>
+</tr>
+<tr class="bg-white border-b dark:bg-[#1c2127] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+<th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="row">#TKT-002</th>
+<td class="px-6 py-4">API Documentation Request</td>
+<td class="px-6 py-4"><span class="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">Resolved</span></td>
+</tr>
+<tr class="bg-white dark:bg-[#1c2127] hover:bg-gray-50 dark:hover:bg-gray-800">
+<th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="row">#TKT-003</th>
+<td class="px-6 py-4">Feature suggestion</td>
+<td class="px-6 py-4"><span class="text-xs font-medium px-2 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200">In Progress</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
