@@ -2,11 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleButton = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
+    const setAutomaticTheme = () => {
+        const hour = new Date().getHours();
+        // Dark mode between 8 PM (20) and 6 AM (6)
+        if (hour >= 20 || hour < 6) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+    };
+
     // On page load, check for saved theme preference in localStorage
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        if (savedTheme === 'dark') {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
     } else {
-        htmlElement.classList.remove('dark');
+        setAutomaticTheme();
     }
 
     themeToggleButton.addEventListener('click', () => {
