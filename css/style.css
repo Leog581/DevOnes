@@ -5,3 +5,14 @@
 .animate-marquee-infinite {
     animation: marquee-infinite 20s linear infinite;
 }
+
+/*
+ * Professional Polish: Add smooth transitions for theme changes.
+ * This makes the switch between light and dark mode less jarring
+ * by animating the color changes over a short duration.
+*/
+body, .bg-white, .bg-gray-100, .bg-gray-200, .dark .dark\:bg-background-dark, .dark .dark\:bg-\[\#1c2127\], .dark .dark\:bg-gray-700, .dark .dark\:bg-gray-800, .dark .dark\:bg-gray-900\/50 {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
